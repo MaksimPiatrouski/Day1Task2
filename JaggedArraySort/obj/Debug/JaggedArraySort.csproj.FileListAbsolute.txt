@@ -1,0 +1,5 @@
+C:\workspace\CSharp\projects\Day1Task2\JaggedArraySort\bin\Debug\JaggedArraySort.dll
+C:\workspace\CSharp\projects\Day1Task2\JaggedArraySort\bin\Debug\JaggedArraySort.pdb
+C:\workspace\CSharp\projects\Day1Task2\JaggedArraySort\obj\Debug\JaggedArraySort.csprojResolveAssemblyReference.cache
+C:\workspace\CSharp\projects\Day1Task2\JaggedArraySort\obj\Debug\JaggedArraySort.dll
+C:\workspace\CSharp\projects\Day1Task2\JaggedArraySort\obj\Debug\JaggedArraySort.pdb
