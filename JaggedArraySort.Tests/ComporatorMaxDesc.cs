@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedArraySort.Tests
 {
-    class ComporatorMaxDesc : IJaggedArrayComparator
+    class ComporatorMaxDesc : IComparer<int[]>
     {
         public int Compare(int[] a, int[] b)
         {

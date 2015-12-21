@@ -46,21 +46,43 @@ namespace JaggedArraySort.Tests
             }
         }
 
+        #region interface
         [Test, TestCaseSource(typeof(ArraySortTest), "TestDataSum")]
-        public static void SortMethod_Test_BySumAsc(int[][] jaggedArray, int[][] expected)
+        public static void SortMethod_Test_Interface_BySumAsc(int[][] jaggedArray, int[][] expected)
         {
-            IJaggedArrayComparator comparator = new ComporatorSumAsc();
+            IComparer<int[]> comparator = new ComporatorSumAsc();
             ArraySort.Sort(jaggedArray, comparator);
             CollectionAssert.AreEqual(jaggedArray, expected);
         }
 
         [Test, TestCaseSource(typeof(ArraySortTest), "TestDataSum")]
-        public static void SortJMethod_Test_BySumDesc(int[][] jaggedArray, int[][] expected)
+        public static void SortJMethod_Test_Interface_BySumDesc(int[][] jaggedArray, int[][] expected)
         {
-            IJaggedArrayComparator comparator = new ComporatorSumDesc();
+            IComparer<int[]> comparator = new ComporatorSumDesc();
             ArraySort.Sort(jaggedArray, comparator);
             CollectionAssert.AreEqual(jaggedArray, expected.Reverse());
         }
+        #endregion
+
+        #region delegate
+        [Test, TestCaseSource(typeof(ArraySortTest), "TestDataSum")]
+        public static void SortMethod_Test_Delegate_BySumAsc(int[][] jaggedArray, int[][] expected)
+        {
+            ComporatorSumAsc c = new ComporatorSumAsc();
+            ArraySort.Comparator comp = c.Compare;
+            ArraySort.Sort(jaggedArray, comp);
+            CollectionAssert.AreEqual(jaggedArray, expected);
+        }
+
+        [Test, TestCaseSource(typeof(ArraySortTest), "TestDataSum")]
+        public static void SortJMethod_Test_Delegate_BySumDesc(int[][] jaggedArray, int[][] expected)
+        {
+            ComporatorSumDesc c = new ComporatorSumDesc();
+            ArraySort.Comparator comp = c.Compare;
+            ArraySort.Sort(jaggedArray, comp);
+            CollectionAssert.AreEqual(jaggedArray, expected.Reverse());
+        }
+        #endregion
         #endregion
 
         #region SortByMax
@@ -98,23 +120,43 @@ namespace JaggedArraySort.Tests
             }
         }
 
+        #region interface
         [Test, TestCaseSource(typeof(ArraySortTest), "TestDataMax")]
-        public static void SortMethod_Test_ByMaxAsc(int[][] jaggedArray, int[][] expected)
+        public static void SortMethod_Test_Interface_ByMaxAsc(int[][] jaggedArray, int[][] expected)
         {
-            IJaggedArrayComparator comparator = new ComporatorMaxAsc();
+            IComparer<int[]> comparator = new ComporatorMaxAsc();
             ArraySort.Sort(jaggedArray, comparator);
             CollectionAssert.AreEqual(jaggedArray, expected);
         }
 
         [Test, TestCaseSource(typeof(ArraySortTest), "TestDataMax")]
-        public static void SortJMethod_Test_ByMaxDesc(int[][] jaggedArray, int[][] expected)
+        public static void SortJMethod_Test_Interface_ByMaxDesc(int[][] jaggedArray, int[][] expected)
         {
-            IJaggedArrayComparator comparator = new ComporatorMaxDesc();
+            IComparer<int[]> comparator = new ComporatorMaxDesc();
             ArraySort.Sort(jaggedArray, comparator);
             CollectionAssert.AreEqual(jaggedArray, expected.Reverse());
         }
         #endregion
+
+        #region delegate
+        [Test, TestCaseSource(typeof(ArraySortTest), "TestDataMax")]
+        public static void SortMethod_Test_Delegate_ByMaxAsc(int[][] jaggedArray, int[][] expected)
+        {
+            ComporatorMaxAsc c = new ComporatorMaxAsc();
+            ArraySort.Comparator comp = c.Compare;
+            ArraySort.Sort(jaggedArray, comp);
+            CollectionAssert.AreEqual(jaggedArray, expected);
+        }
+
+        [Test, TestCaseSource(typeof(ArraySortTest), "TestDataMax")]
+        public static void SortJMethod_Test_Delegate_ByMaxDesc(int[][] jaggedArray, int[][] expected)
+        {
+            ComporatorMaxDesc c = new ComporatorMaxDesc();
+            ArraySort.Comparator comp = c.Compare;
+            ArraySort.Sort(jaggedArray, comp);
+            CollectionAssert.AreEqual(jaggedArray, expected.Reverse());
+        }
+        #endregion
+        #endregion
     }
-
-
 }
