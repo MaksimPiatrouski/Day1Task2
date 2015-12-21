@@ -8,18 +8,13 @@ namespace JaggedArraySort
 {
     public class ArraySort
     {
-        public static void Sort(int[][] jaggedArray, Func<int[], int> myFunc, int order)
+        public static void Sort(int[][] jaggedArray, IJaggedArrayComparator comparator)
         {
             for (int i = 0; i < jaggedArray.Length - 1; i++)
             {
                 for (int j = 0; j < jaggedArray.Length - i - 1; j++)
                 {
-                    if ((myFunc(jaggedArray[j]) < myFunc(jaggedArray[j + 1]) && order == 0))
-                    {
-                        Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
-                    }
-
-                    else if ((myFunc(jaggedArray[j]) > myFunc(jaggedArray[j + 1]) && order == 1))
+                    if (comparator.Compare(jaggedArray[j], jaggedArray[j + 1]) == 1)
                     {
                         Swap(ref jaggedArray[j], ref jaggedArray[j + 1]);
                     }
@@ -27,26 +22,9 @@ namespace JaggedArraySort
             }
         }
 
-        public static int Sum(int[] line)
-        {
-            int sum = 0;
-            foreach (int i in line)
-            {
-                sum += i;
-            }
-            return sum;
-        }
+       
 
-        public static int Max(int[] line)
-        {
-            int max = line[0];
-            for (int i = 0; i < line.Length; i++)
-            {
-                if (line[i] > max)
-                    max = line[i];
-            }
-            return max;
-        }
+        
 
         public static int Min(int[] line)
         {

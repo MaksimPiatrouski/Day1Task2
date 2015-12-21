@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CAE9D1F9-C1E2-46BA-839A-22D24A7F55F7}</ProjectGuid>
+    <ProjectGuid>{6CA26B92-F50D-43E8-88A1-9464AFD37566}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JaggedArraySort</RootNamespace>
-    <AssemblyName>JaggedArraySort</AssemblyName>
+    <RootNamespace>JaggedArraySort.Tests</RootNamespace>
+    <AssemblyName>JaggedArraySort.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -29,10 +29,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,9 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArraySort.cs" />
-    <Compile Include="IJaggedArrayComparator.cs" />
+    <Compile Include="ArraySortTests.cs" />
+    <Compile Include="ComporatorMaxAsc.cs" />
+    <Compile Include="ComporatorMaxDesc.cs" />
+    <Compile Include="ComporatorSumAsc.cs" />
+    <Compile Include="ComporatorSumDesc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JaggedArraySort\JaggedArraySort.csproj">
+      <Project>{cae9d1f9-c1e2-46ba-839a-22d24a7f55f7}</Project>
+      <Name>JaggedArraySort</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

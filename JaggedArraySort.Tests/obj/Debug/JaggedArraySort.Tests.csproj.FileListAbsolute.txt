@@ -1,0 +1,9 @@
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\obj\Debug\JaggedArraySort.Tests.csprojResolveAssemblyReference.cache
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\bin\Debug\JaggedArraySort.Tests.dll
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\bin\Debug\JaggedArraySort.Tests.pdb
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\bin\Debug\JaggedArraySort.dll
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\bin\Debug\nunit.framework.dll
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\bin\Debug\JaggedArraySort.pdb
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\bin\Debug\nunit.framework.xml
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\obj\Debug\JaggedArraySort.Tests.dll
+C:\workspace\CSharp\Projects\Day1Task2\JaggedArraySort.Tests\obj\Debug\JaggedArraySort.Tests.pdb
