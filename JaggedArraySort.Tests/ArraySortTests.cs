@@ -77,8 +77,8 @@ namespace JaggedArraySort.Tests
 
                     new int[][]
                     {
-                        new int[] {-5, -3},
                         new int[] {1, 2, 3, 4},
+                        new int[] {-5, -3},
                         new int[] {6, 8, 10} }
                        );
 
@@ -91,12 +91,13 @@ namespace JaggedArraySort.Tests
                         new int[] {-5, -10, -15} },
                     new int[][]
                      {
+                        new int[] { 0 },
                         new int[] {-5, -10, -15},
-                      new int[] { 0 },
-                      new int[] { -10, 0, 10, 100 }}
+                        new int[] { -10, 0, 10, 100 }}
                       );
             }
         }
+
         [Test, TestCaseSource(typeof(ArraySortTest), "TestDataMax")]
         public static void SortMethod_Test_ByMaxAsc(int[][] jaggedArray, int[][] expected)
         {
