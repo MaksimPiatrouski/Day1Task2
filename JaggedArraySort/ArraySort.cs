@@ -22,21 +22,6 @@ namespace JaggedArraySort
             }
         }
 
-       
-
-        
-
-        public static int Min(int[] line)
-        {
-            int min = line[0];
-            for (int i = 0; i < line.Length; i++)
-            {
-                if (line[i] < min)
-                    min = line[i];
-            }
-            return min;
-        }
-
         private static void Swap(ref int[] a, ref int[] b)
         {
             int[] temp = a;
