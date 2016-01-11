@@ -42,10 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArraySortTests.cs" />
-    <Compile Include="ComporatorMaxAsc.cs" />
-    <Compile Include="ComporatorMaxDesc.cs" />
-    <Compile Include="ComporatorSumAsc.cs" />
-    <Compile Include="ComporatorSumDesc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
